@@ -1,3 +1,5 @@
+☀ This project is a fork-off of the much simpler [`/itsN1X/`8678_twitter_followings](https://github.com/itsN1X/8678_twitter_followings) codebase. What follows is the legacy `README` from the aforementioned repository code. For instructions specific to this version, consider reading the `README` file after the triple linebreak.
+
 # 8678_twitter_followings
 Just a small Data Mining episode lmao ✁
 ###### oki oki jk jk
@@ -36,6 +38,28 @@ Viola! There you a have a long list, separated by a line after 100 numbers!
 **(Maximum 100 numbers at once)**
 ### What are these numbers?
 These numbers are nothing bit the "Twitter's 'AccountId' for each user". So, its basically a unique identifier for each user. Therefore, it makes any 'change in usernames' or "screenname" immaterial. (Since an account follows an 'AccountId' and not an "@username" in the backend systems;)
+
+## Thanks !
+
+----
+----
+----
+
+# [`/itsN1X/`8719_twitter_followings/](https://github.com/itsN1X/8719_twitter_followings)
+
+This is an advanced version of [`/itsN1X/`8678_twitter_followings](https://github.com/itsN1X/8678_twitter_followings) codebase.
+## What does it do?
+This version is aimed at finding ~~friends~~ non-friends. Twitter defines friends as the two accounts mutually following each other.  
+This piece of software lets you find **your** ~~friends~~non-friends.
+### Requirements:
+ - Your `followers.js`
+ - Your `following.js`
+
+### Results:
+In the end, you will be handed over a list of `AccountId`s that can be imported into a twitter list via something like ***TweetDeck*** or something something.  
+The file you shoot up this time is called the `heartbreak.html`.  All other steps are same as the previous versions.
+
+🖤
 
 ## Thanks !
 
