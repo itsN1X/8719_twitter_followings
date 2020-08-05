@@ -1,0 +1,402 @@
+<html>
+<style>
+.highlight {
+ color:#d0d0d0
+}
+.highlight table td {
+ padding:5px
+}
+.highlight table pre {
+ margin:0
+}
+.highlight .w {
+ color:#d0d0d0
+}
+.highlight .err {
+ color:#151515;
+ background-color:#ac4142
+}
+.highlight .c,.highlight .cd,.highlight .cm,.highlight .c1,.highlight .cs {
+ color:#888
+}
+.highlight .cp {
+ color:#f4bf75
+}
+.highlight .o,.highlight .ow {
+ color:#f4bf75
+}
+.highlight .p,.highlight .pi {
+ color:#d0d0d0
+}
+.highlight .gi {
+ color:#90a959
+}
+.highlight .gd {
+ color:#ac4142
+}
+.highlight .gh {
+ color:#6a9fb5;
+ font-weight:bold
+}
+.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv {
+ color:#aa759f
+}
+.highlight .kc,.highlight .kt,.highlight .kd {
+ color:#d28445
+}
+.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1 {
+ color:#90a959
+}
+.highlight .sr {
+ color:#75b5aa
+}
+.highlight .si,.highlight .se {
+ color:#8f5536
+}
+.highlight .nt,.highlight .nn,.highlight .nc,.highlight .no {
+ color:#f4bf75
+}
+.highlight .na {
+ color:#6a9fb5
+}
+.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mb,.highlight .mx {
+ color:#90a959
+}
+.highlight .ss {
+ color:#90a959
+}
+body {
+ margin:0;
+ padding:0;
+ background:#151515;
+ color:#eaeaea;
+ font-size:16px;
+ line-height:1.5;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+}
+.container {
+ width:90%;
+ max-width:1000px;
+ margin:0 auto
+}
+section {
+ display:block;
+ margin:0 0 20px 0
+}
+h1,h2,h3,h4,h5,h6 {
+ margin:0 0 20px
+}
+li {
+ line-height:1.4
+}
+header {
+ background:rgba(0,0,0,0.1);
+ width:100%;
+ border-bottom:1px dashed #b5e853;
+ padding:20px 0;
+ margin:0 0 40px 0
+}
+header h1 {
+ font-size:30px;
+ line-height:1.5;
+ margin:0 0 0 -40px;
+ font-weight:bold;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+ color:#b5e853;
+ text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1);
+ letter-spacing:-1px;
+ -webkit-font-smoothing:antialiased
+}
+header h1:before {
+ content:"./ ";
+ font-size:24px
+}
+header h2 {
+ font-size:18px;
+ font-weight:300;
+ color:#666
+}
+#downloads .btn {
+ display:inline-block;
+ text-align:center;
+ margin:0
+}
+#main_content {
+ width:100%;
+ -webkit-font-smoothing:antialiased
+}
+section img {
+ max-width:100%
+}
+h1,h2,h3,h4,h5,h6 {
+ font-weight:normal;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+ color:#b5e853;
+ letter-spacing:-0.03em;
+ text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1);
+ text-align:center;
+}
+dt {
+ font-style:italic;
+ font-weight:bold
+}
+blockquote {
+ color:#aaa;
+ padding-left:10px;
+ border-left:1px dotted #666
+}
+pre {
+ background:rgba(0,0,0,0.9);
+ border:1px solid rgba(255,255,255,0.15);
+ padding:10px;
+ font-size:16px;
+ color:#b5e853;
+ border-radius:2px;
+ word-wrap:normal;
+ overflow:auto;
+ overflow-y:hidden
+}
+code.highlighter-rouge {
+ background:rgba(0,0,0,0.9);
+ border:1px solid rgba(255,255,255,0.15);
+ padding:0px 3px;
+ margin:0px -3px;
+ color:#aa759f;
+ border-radius:2px
+}
+hr {
+ height:0;
+ border:0;
+ border-bottom:1px dashed #b5e853;
+ color:#b5e853
+}
+.btn {
+ display:inline-block;
+ background:-webkit-linear-gradient(top, rgba(40,40,40,0.3), rgba(35,35,35,0.3) 50%, rgba(10,10,10,0.3) 50%, rgba(0,0,0,0.3));
+ padding:8px 18px;
+ border-radius:50px;
+ border:2px solid rgba(0,0,0,0.7);
+ border-bottom:2px solid rgba(0,0,0,0.7);
+ border-top:2px solid #000;
+ color:rgba(255,255,255,0.8);
+ font-family:Helvetica, Arial, sans-serif;
+ font-weight:bold;
+ font-size:13px;
+ text-decoration:none;
+ text-shadow:0 -1px 0 rgba(0,0,0,0.75);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)
+}
+.btn:hover {
+ background:-webkit-linear-gradient(top, rgba(40,40,40,0.6), rgba(35,35,35,0.6) 50%, rgba(10,10,10,0.8) 50%, rgba(0,0,0,0.8))
+}
+.btn .icon {
+ display:inline-block;
+ width:16px;
+ height:16px;
+ margin:1px 8px 0 0;
+ float:left
+}
+a {
+ color:#63c0f5;
+ text-shadow:0 0 5px rgba(104,182,255,0.5);
+ text-decoration:none;
+}
+.cf:before,.cf:after {
+ content:"";
+ display:table
+}
+.cf:after {
+ clear:both
+}
+.cf {
+ zoom:1
+}
+header {
+ display:none
+}
+* {
+ box-sizing:border-box
+}
+::selection {
+ background:purple
+}
+::-moz-selection {
+ background:purple
+}
+h3{
+ border:1px solid #ddd;
+ margin:8% 25vw 8% 25vw;}
+
+.XXXavier {
+ border-collapse:collapse;
+ margin:8% 0 0 25vw;
+ width:50vw;
+ border:1px solid #ddd;
+ font-size:18px
+}
+.XXXavier th {
+ text-align:center;
+ padding:12px;
+ font-size:18px
+}
+.XXXavier td {
+ padding:12px;
+ text-align:center;
+ font-size:12px
+}
+.XXXavier tr {
+ border-bottom:1px solid #ddd;
+ background-color:#020;
+}
+.XXXavier tr:hover {
+ background-color:#070;
+}
+.XXXavier tr.header {
+ background-color:#422121;
+ font-size:18px
+}
+.XXXavier tr.header:hover {
+  background-color: #BB3333;
+}
+#myInput {
+ margin:8% 0 0 25vw;
+ width:50vw
+}
+
+</style>
+<h2>Here are your Twitter facts!</h2>
+
+
+
+<details>
+<summary><h3>Your circle: <i><span id="appsab"></span></i></h3></summary>
+
+<table class="XXXavier" id="itsN1Xab"></table>
+</details>
+<hr>
+
+<details>
+<summary>
+<h3>Your followers: <i><span id="apps1"></span></i></h3></summary>
+<table class="XXXavier" id="itsN1X1"></table><br>
+</details>
+<hr>
+
+<details>
+<summary>
+<h3>You follow: <i><span id="apps2"></span></i></h3></summary>
+<table class="XXXavier" id="itsN1X2"></table><br>
+</details>
+<hr>
+
+<details>
+<summary><h3>Don't follow back: <i><span id="apps"></span></i></h3></summary>
+<h1> :( Non-friends ) :</h1>
+<table class="XXXavier" id="itsN1X"></table><br>
+</details>
+<hr>
+
+
+<br>
+<script src="following.js"></script>
+<script src="follower.js"></script>
+<script>
+
+const appab = document.getElementById('itsN1Xab');
+const app1 = document.getElementById('itsN1X1');
+const app2 = document.getElementById('itsN1X2');
+const app = document.getElementById('itsN1X');
+let er = [];
+let ng = [];
+let ab = [];
+
+
+for (i=0;i<vers.length;i++){er.push(vers[i].follower.accountId);}
+for (i=0;i<ving.length;i++){ng.push(ving[i].following.accountId);}
+
+
+
+for (i=0;i<er.length;i++){
+te1 = document.createElement('tr');
+e1 = document.createElement('td');
+e1.textContent=er[i];
+te1.appendChild(e1);
+const c1 = document.createElement('td');
+c1.textContent = i+1;
+te1.appendChild(c1);
+app1.appendChild(te1);
+}
+
+const apps1x = document.getElementById('apps1');
+apps1x.textContent = er.length+1;
+
+
+for (i=0;i<ng.length;i++){
+te2 = document.createElement('tr');
+e2 = document.createElement('td');
+e2.textContent=ng[i];
+te2.appendChild(e2);
+const c1 = document.createElement('td');
+c1.textContent = i+1;
+te2.appendChild(c1);
+app2.appendChild(te2);
+}
+const apps2x = document.getElementById('apps2');
+apps2x.textContent = ng.length+1;
+
+
+// TODO:find max(ng,er)
+
+let flo=0;
+for (i=0;i<ving.length;i++){
+
+if (er.indexOf(ng[i]) == -1 )
+{
+flo+=1;
+tfff = document.createElement('tr');
+fff = document.createElement('td');
+fff.textContent = ng[i];
+tfff.appendChild(fff);
+const c1 = document.createElement('td');
+c1.textContent = flo;
+tfff.appendChild(c1);
+app.appendChild(tfff);
+}
+}
+const appsx = document.getElementById('apps');
+appsx.textContent = flo;
+// abook
+ab = ab.concat(ng);
+ab = ab.concat(er);
+babe = new Set(ab);
+bab = Array.from(babe);
+
+
+for (i=0;i<bab.length;i++){
+teab = document.createElement('tr');
+eab = document.createElement('td');
+eab.textContent=bab[i];
+teab.appendChild(eab);
+const c1 = document.createElement('td');
+c1.textContent = i+1;
+teab.appendChild(c1);
+appab.appendChild(teab);
+}
+
+const appsabx = document.getElementById('appsab');
+appsabx.textContent = bab.length+1;
+
+</script>
+
+
+<hr><hr><hr><hr>
+<h4>Thank U for ya time!</h4>
+<h5>Inspiration: AirCon --fix-broken!</h5>
+<div align=center>$ETH :: 0xd6df5C1C8a2a5881E14855463cf576193c8721db</div>
+<h5>Visit <a href="https://9xo.github.io/R/teb">9xo/R</a> if you got other kinda love!</h5>
+<div align=center><font size=1><b><a href="https://google.com/search?q=itsN1X">CREA10R</a> :: <a href="https://about.me/itsN1X">About them</a> | Github:<a href="https://github.com/itsN1X">@itsN1X</a> :: twitter:<a href="https://twitter.com/itsN1X">@itsN1X</a></b></font></div>
+<hr><hr><hr><hr>
+
+
+
+</html>
